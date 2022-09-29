@@ -1,0 +1,51 @@
+
+
+http://179.14.230.121:8082/users
+
+
+
+
+http://127.0.0.1:8082/users
+
+{
+"userCedula": "1060",
+"userName": "yon",
+"userLastName": "gal",
+"userAddress": "calle",
+"userTelephone": "312",
+"userMail" : "yon@gmail.com",
+"userGender": "Masculino"
+}
+
+
+
+
+
+http://127.0.0.1:8082/events
+
+{
+"eventName": "feria",
+"eventProductor": "persona",
+"eventDescript": "musica en vivo",
+"eventType": "cerrado",
+"eventCategory" : "musical",
+
+"eventPlace": "Plaza bolivar",
+"eventAddress": "calle 20",
+"eventCity": "Manila"
+}
+
+
+
+
+http://127.0.0.1:8082/musics
+
+{
+"musicTitle": "te gateo",
+"musicGenre": "regaeton",
+"musicAuthor": "reykon",
+"musicDuration": "03:02"
+}
+
+
+
