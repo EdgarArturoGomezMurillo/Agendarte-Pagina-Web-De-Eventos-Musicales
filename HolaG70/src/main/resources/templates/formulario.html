@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AgendArte - Rock Al Parque</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Caladea|Comic+Neue:300,300i,400,400i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-flex align-items-center fixed-top ">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-center justify-content-lg-start">
+      </div>
+    </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <div class="logo me-auto">
+        <h1>
+          <a th:href="@{/}"><img src="assets/img/logo3.png" alt="" class="img-fluid" /></a>
+          <a th:href="@{/}">AgendArte</a>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+      </div>
+
+      <!-- <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#about">Nosotros</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Cronograma</a></li>
+          <li><a class="nav-link scrollto" href="#specials">Specials</a></li>
+          <li>
+            <a class="nav-link scrollto" href="#events">Proximos Eventos</a>
+          </li>
+          <li><a class="nav-link scrollto" href="#chefs">Equipo</a></li>
+          <li><a class="nav-link scrollto" href="#gallery">Galeria</a></li>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav> -->
+      <!-- .navbar -->
+
+      <!-- <a href="formulario.html" class="book-a-table-btn scrollto">Agendate</a> -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Formulario</h2>
+          <ol>
+            <li><a th:href="@{/}">Inicio</a></li>
+            <li>Agendate</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+
+
+
+    <section id="book-a-table" class="book-a-table">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><span>Agendate</span></h2>
+          <p>Aquí puedes agregar la información de tu evento y así nosotros actualizarlo en nuestro cronograma.</p>
+        </div>
+
+        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Nombre Completo"
+                data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico"
+                data-rule="email" data-msg="Por favor introduzca una dirección de correo electrónico válida">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Teléfono"
+                data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="date" name="date" class="form-control" id="date" placeholder="Fecha del evento"
+                data-rule="minlen:4" data-msg="Por favor ingrese la fecha exacta del evento">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="time" class="form-control" name="time" id="time" placeholder="Hora" data-rule="minlen:4"
+                data-msg="Por favor ingrese la hora exacta del evento">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" class="form-control" name="place" id="place" placeholder="Lugar" data-rule="minlen:1"
+                data-msg="Por favor ingrese el lugar donde se realizará el evento">
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg col-md-6 form-group mt-3">
+              <input type="file" class="form-control" name="file" id="file" placeholder="Foto o Banner"
+                data-rule="minlen:1" data-msg="Please enter at least 1 chars">
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Información adicional"></textarea>
+            <div class="validate"></div>
+          </div>
+
+
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your
+              reservation. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Enviar formulario</button></div>
+        </form>
+
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>AgendArte</h3>
+      <p>
+        La mejor pagina para que agendes tus eventos musicales.
+      </p>
+      <div class="copyright">
+        &copy; Copyright <strong><span sty>AgendArte</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
