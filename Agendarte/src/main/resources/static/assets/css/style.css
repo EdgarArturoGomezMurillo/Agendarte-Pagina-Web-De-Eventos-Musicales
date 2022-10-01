@@ -32,7 +32,10 @@ h5,
 h6 {
   font-family: "Qualy", sans-serif;
 }
-
+@font-face {
+  font-family:Qualy ;
+  src: url(fonts/Qualy_Bold.ttf);
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1635,3 +1638,39 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+/*-------------Inicio Formulario-------*/
+input[type=text], input[type=password], input[type=number], select{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4DB6AC;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #004D40;
+}
+
+.formularioiniciosesion{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 50%;
+  margin:auto;
+}
+
+/*--Fin de Formulario Inicio de Sesion --*/
