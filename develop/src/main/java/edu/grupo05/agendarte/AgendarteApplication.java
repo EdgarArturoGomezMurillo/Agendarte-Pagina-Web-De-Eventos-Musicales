@@ -8,6 +8,13 @@ import edu.grupo05.agendarte.repository.*;
 import edu.grupo05.agendarte.entity.*;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
+
+import static javax.measure.unit.SI.KILOGRAM;
+import javax.measure.quantity.Mass;
+import org.jscience.physics.model.RelativisticModel;
+import org.jscience.physics.amount.Amount;
+
+
 @SpringBootApplication
 //@SpringBootApplication(exclude = { SecurityAutoConfiguration.class })
 public class AgendarteApplication {

@@ -18,7 +18,7 @@ import java.util.Set;
 @Builder
 
 //// Adding the table name
-//@Table(name = "User")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
